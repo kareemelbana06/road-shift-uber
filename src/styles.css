@@ -367,6 +367,11 @@ footer>small{font-size:11px;color:#b8b8b8}
   .hero-scene-car img{object-position:73% center}
   .hero-scene-bike img{object-position:26% center}
   .hero-visual:before{background:linear-gradient(0deg,#050505 0%,rgba(5,5,5,.95) 25%,rgba(5,5,5,.54) 51%,rgba(5,5,5,.06) 100%),linear-gradient(90deg,rgba(5,5,5,.08),transparent 74%)}
+  .redirect-banner{gap:8px;min-height:48px;padding-inline:10px}
+  .redirect-banner-copy{gap:5px;font-size:11px}
+  .redirect-status-dot{width:6px;height:6px}
+  .redirect-countdown{min-width:28px;height:22px}
+  .redirect-banner-link{min-height:32px;padding-inline:9px;font-size:11px}
   .option{height:430px;min-height:430px}
   .option img{height:56%}
   .signup-note{border-color:#363130;background:linear-gradient(110deg,#151211,#0a0a0a)}
@@ -378,6 +383,15 @@ footer>small{font-size:11px;color:#b8b8b8}
   .option img,.hero .button,.closing .button{transition:none}
 }
 
-.redirect-banner{position:sticky;top:0;z-index:30;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:4px 10px;min-height:38px;padding:8px 14px;border-bottom:1px solid var(--border);background:var(--surface);color:var(--foreground);font-size:12px;text-align:center}
-.redirect-banner a{font-weight:700;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.redirect-banner{position:sticky;top:0;z-index:30;display:flex;justify-content:center;align-items:center;gap:16px;min-height:44px;padding:7px 16px;border-bottom:1px solid #ffffff18;background:linear-gradient(90deg,#17110f,#0f0f0f 50%,#17110f);box-shadow:0 8px 24px #0005;color:var(--foreground);font-size:12px;text-align:center;backdrop-filter:blur(14px)}
+.redirect-banner-copy{display:flex;align-items:center;gap:8px;font-weight:650;letter-spacing:.01em}
+.redirect-status-dot{width:7px;height:7px;border-radius:50%;background:#d18a78;box-shadow:0 0 10px #bd715e}
+.redirect-countdown{display:grid;place-items:center;min-width:30px;height:24px;margin-left:2px;border:1px solid #ffffff24;border-radius:999px;background:#ffffff0a;color:#e6b4a6;font:700 11px "Sora";font-variant-numeric:tabular-nums}
+.redirect-banner-link{display:inline-flex;align-items:center;gap:7px;min-height:30px;padding:0 10px;border:1px solid #ffffff20;border-radius:999px;background:#ffffff09;font-weight:750;white-space:nowrap;transition:.18s ease}
+.redirect-banner-link:hover{border-color:#ffffff45;background:#ffffff12}
+.redirect-banner-link svg{transition:transform .18s ease}
+.redirect-banner-link:hover svg{transform:translateX(2px)}
+.redirect-banner-link:active{transform:scale(.97)}
+.redirect-banner-progress{position:absolute;left:0;bottom:-1px;width:100%;height:2px;transform-origin:left;background:linear-gradient(90deg,#bd715e,#f0c1b3);animation:redirect-progress 2s linear forwards}
+@keyframes redirect-progress{from{transform:scaleX(1)}to{transform:scaleX(0)}}
 .nav-cta{white-space:nowrap}

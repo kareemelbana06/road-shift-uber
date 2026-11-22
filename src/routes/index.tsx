@@ -217,12 +217,21 @@ function Index() {
         aria-live="polite"
         aria-atomic="true"
       >
-        <span>
-          Taking you to Uber&apos;s official signup in {secondsUntilRedirect}…
+        <span className="redirect-banner-copy">
+          <span className="redirect-status-dot" aria-hidden="true" />
+          <span>Redirecting to Uber&apos;s official signup</span>
+          <span className="redirect-countdown" aria-label={`${secondsUntilRedirect} seconds remaining`}>
+            {secondsUntilRedirect}s
+          </span>
         </span>
-        <a href={INVITE_LINK} onClick={trackSignupConversion}>
-          Continue now
+        <a
+          className="redirect-banner-link"
+          href={INVITE_LINK}
+          onClick={trackSignupConversion}
+        >
+          Continue now <ArrowRight size={14} aria-hidden="true" />
         </a>
+        <span className="redirect-banner-progress" aria-hidden="true" />
       </div>
       <Header />
       <section className="intro hero">
